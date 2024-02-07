@@ -7,9 +7,12 @@ import random
 import json
 
 comments = [
-    "Wanna see my n*d! pics? https://shorturl.at/DTX59",
-    "I'm going ho#ny here https://shorturl.at/DTX59",
-    "Special offers for my baby sugars https://shorturl.at/DTX59"
+    "Wanna see my n*d! pics? link in bio!",
+    "I'm going na#ed, Link in bio",
+    "I'm an upcoming pawn star, Support me please. Link in bio",
+    "I'm an upcoming pawn star, Support me please. Link in bio",
+    "I'm an upcoming pawn star, Support me please. Link in bio",
+    "I'm an upcoming pawn star, Support me please. Link in bio"
 ]
 
 def comment(userId, password, keyword, mssg) :
@@ -35,7 +38,7 @@ def comment(userId, password, keyword, mssg) :
     scrollTo = 0
 
 
-    for i in range(len(articles)) :
+    for i in range(1) :
         browser.execute_script(f"window.scrollTo(0, {str(scrollTo)})")
         articles[i].click()
         sleep(10)
@@ -49,7 +52,7 @@ def comment(userId, password, keyword, mssg) :
         browser.find_element(By.CSS_SELECTOR, "form").submit()
         sleep(7)
         articles = browser.find_elements(By.CSS_SELECTOR, "article")
-        time.sleep(400)
+        sleep(400)
         i+=1
 
     driver.quit()
